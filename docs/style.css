@@ -13,6 +13,9 @@ body{
   justify-content: center;
   align-items: center;
 }
+.contain .grid-1 .li-H li a {
+  z-index:10000
+}
 #cercle {
   position: absolute;
     width: 250px;
