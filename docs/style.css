@@ -162,7 +162,7 @@ margin-top: 20px;}
 }
 .preloader{
   position: fixed;
-  z-index: 15;
+  
   top: 0;
   left: 0;
   width: 100%;
@@ -173,6 +173,7 @@ margin-top: 20px;}
   display: flex;
   justify-content: center;
   align-items: center;
+	
 }
 .preloader:before{
   content: '';
@@ -183,8 +184,7 @@ margin-top: 20px;}
   background: black;
   transition: 4s;
   transition-delay: 5s;
-  animation: display 9s linear;
-	animation-iteration-count: 1;
+  
 }
 @keyframes display{
 	0%{ display:block;}
@@ -218,13 +218,6 @@ margin-top: 20px;}
   animation: animate2 1s linear infinite;
   animation: animate3 6s linear  ;
 
-}
-@keyframes animate3 {
-  0%{opacity: 0;}
-  50%{opacity: 1;}
-  100%{
-    opacity: 0;
-  }
 }
 .loader .arc {
 	position: absolute;
