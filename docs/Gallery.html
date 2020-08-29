@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gallery AlzC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Gallery.css">
+
+  </head>
+  <body>
+      <section class="container-fluid">
+        <ul>
+        <li class="list active" data-filter="itemBox">All</li>
+        <li class="list" data-filter="Seo">Seo & Maintenance</li>
+        <li class="list" data-filter="Maquette"><M>Maquette</M></li>
+        <li class="list" data-filter="Parallax">Parallax</li>
+        <li class="list" data-filter="3D">3D</li>
+        <li class="list" data-filter="Animation">Animation</li>
+        <li class="list" data-filter="Wordpress">Wordpress</li>
+        <li class="list" data-filter="Responsive">Responsive</li>
+      </ul>
+      <div class=" container product d-flex">      
+
+        <div class="itemBox Parallax"><a href="https://alzc.github.io/moon.github.io/" target="_blank"><img src="parallax1.jpg" alt=""></a></div>
+        <div class="itemBox Parallax"><a href="https://alzc.github.io/parallax2.github.io/" target="_blank"><img src="parallax2.jpg" alt=""></a></div>
+        <div class="itemBox 3D Responsive Animation"><a href="https://alzc.github.io/Cube.github.io/" target="_blank"><img src="3D1.jpg" alt=""></a></div>
+        <div class="itemBox Animation Responsive"><a href="https://alzc.github.io/mario.github.io/" target="_blank"><img src="mario.png" alt=""></a></div>
+        <div class="itemBox Maquette Responsive"><a href="#"><img src="peche.jpg" alt=""></a></div>
+        <div class="itemBox 3D Responsive Animation "><a href="https://alzc.github.io/3dg-github.io/" target="_blank"><img src="ratate.jpg" alt=""><p>3D rotate Gallery</p></a></div>
+        <div class="itemBox Seo Responsive"><a href="https://hexodstudio.fr/" target="_blank"><img src="background-main.jpg" alt=""></a></div>
+        <div class="itemBox Seo Responsive"><a href="https://les-dunes-38.fr/" target="_blank"><img src="dune.jpg" alt=""></a></div>
+        <div class="itemBox Maquette"><a href="https://alzc.github.io/Art.github.io/" target="_blank"><img src="ACAB.jpg" alt=""></a></div>
+        </div>
+
+      </section>
+
+
+
+
+
+      <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.list').click(function(){
+          const value = $(this).attr('data-filter');
+          if (value == 'all'){
+            $('.itemBox').show('1000');
+          }
+          else{
+            $('.itemBox').not('.'+value).hide('1000');
+            $('.itemBox').filter('.'+value).show('1000');
+          }
+        })
+        $('.list').click(function(){
+          $(this).addClass('active').siblings().removeClass('active');
+         })
+           })
+
+
+
+    </script>
+   </body>
+</html>
