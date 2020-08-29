@@ -14,7 +14,7 @@ body{
   align-items: center;
 }
 .contain .grid-1 .li-H a {
-  z-index:10000;
+  z-index:5;
 }
 #cercle {
   position: absolute;
@@ -183,6 +183,13 @@ margin-top: 20px;}
   background: black;
   transition: 4s;
   transition-delay: 5s;
+  animation: display 9s linear;
+	animation-iteration-count: 1;
+}
+@keyframes display{
+	0%{ display:block;}
+	99%{display:block;}
+	100%{display:none; }
 }
 .preloader.complete:before{
   left: -50%;
@@ -213,8 +220,8 @@ margin-top: 20px;}
 
 }
 @keyframes animate3 {
-  0%{opacity: 0}
-  50%{opacity: 1}
+  0%{opacity: 0;}
+  50%{opacity: 1;}
   100%{
     opacity: 0;
   }
